@@ -41,7 +41,7 @@ PromptLab fixes that. It gives AI teams a way to version control their prompts (
 ## Screenshots
 
 ### Hero & Dashboard
-![PromptLab Dashboard](https://prompt-lab-ui.vercel.app/)
+![PromptLab Dashboard](screenshots/dashboard.png)
 
 ### A/B Experiment Results
 - Professional tone (v1) → **3.75/5**
@@ -130,5 +130,5 @@ prompt-lab-ui/
 **Martin Oh**
 - Starting MAS-CS @ UPenn, Fall 2025
 - B.B.A. Business @ Emory University
-- [LinkedIn](https://www.linkedin.com/in/martinoh0715)
+- [LinkedIn](https://www.linkedin.com/in/ohmartin/)
 - [GitHub](https://github.com/martinoh0715)
