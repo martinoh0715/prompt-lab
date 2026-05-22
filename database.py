@@ -4,7 +4,12 @@ from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 
 # Create database file (creates prompts.db)
-engine = create_engine("sqlite:///prompts.db")
+import os
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///prompts.db")
+# Railway PostgreSQL URL fix
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+engine = create_engine(DATABASE_URL)
 Base = declarative_base()
 SessionLocal = sessionmaker(bind=engine)
 
