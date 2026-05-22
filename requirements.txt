@@ -4,3 +4,4 @@ sqlalchemy
 python-dotenv
 openai
 pydantic
+echo "psycopg2-binary" >> requirements.txt
