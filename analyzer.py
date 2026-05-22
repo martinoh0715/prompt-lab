@@ -6,10 +6,13 @@ import os
 import statistics
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def get_client():
+    return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 def get_ai_quality_score(input_text: str, output_text: str) -> float:
+    client = get_client()
     """Ask AI to score the quality of a response (1-5) with strict criteria"""
 
     response = client.chat.completions.create(
@@ -96,6 +99,7 @@ def run_live_test(experiment_id: int, user_id: str, input_text: str, prompt_text
     """Run a real AI response and score it automatically"""
     import time
     from experiment import log_result
+    client = get_client()
 
     start = time.time()
     response = client.chat.completions.create(
